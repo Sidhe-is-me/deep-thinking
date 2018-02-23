@@ -17,9 +17,9 @@
       <div class="col-md-4">
         <%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
         <br></br>
-        <%= link_to thought.date, thought%>
+       <%= link_to thought.date, thought%>
 
-        <h6>Emotion Placeholder </h>
+
         <h4><%=thought.entry%></h4>
 
         <td><%= link_to 'Show', thought %></td>

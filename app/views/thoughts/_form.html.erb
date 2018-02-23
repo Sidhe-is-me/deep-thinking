@@ -9,7 +9,7 @@
       </ul>
     </div>
   <% end %>
-
+<div id="form">
   <div class="field">
     <%= form.label :date %>
     <%= form.date_select :date, id: :thought_date %>
@@ -20,10 +20,12 @@
     <%= form.text_area :entry, id: :thought_entry %>
   </div>
 </br>
+<div class="field">
 <h7> I want to set up emotion checkbox iterator here to allow the update to happen just checking and below with an add emotion box</h>
   <div >
     <%= form.label :emotion_name %>
     <%= form.text_field :name, id: :emotion_name %>
+  </div>
   </div>
 
   <div class="field">
@@ -31,10 +33,14 @@
     <br>
     <%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
     <br>
+    <br>
     <%= form.file_field :picture, id: :thought_picture %>
   </div>
-
+</br>
+<div class="field">
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+</div>

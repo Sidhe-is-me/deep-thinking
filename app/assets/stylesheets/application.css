@@ -16,8 +16,12 @@
 
  body{
    padding:5em;
+   opacity: 0.79;
+  background-image: url("DThought.jpg")
 
  }
+
+
  .site-footer {
    margin-top: 3em;
    font-style: oblique;
@@ -32,12 +36,28 @@
 
  .emotions{
     display: inline-flex;
-
     color: grey;
 
  }
-  .field{
-
+  .field{ß
     margin-right: 3em;
     margin-left: 3em;
   }
+
+form{
+  background-color: #ebebeb;
+  position: relative;
+  left: 30px;
+
+  /* border: 3px solid grey */
+}
+
+.field{
+  position: relative;
+}
+
+.bottom-nav-link{
+  margin-left: 2em;
+  padding-left: 3em;
+
+}
