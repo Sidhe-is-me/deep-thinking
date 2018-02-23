@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
 resources :emotions
 resources :thoughts
 root to: redirect('/thoughts')

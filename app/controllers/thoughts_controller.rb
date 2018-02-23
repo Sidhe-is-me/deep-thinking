@@ -2,6 +2,7 @@ class ThoughtsController < ApplicationController
 
   def index
     @thoughts = Thought.all
+    @emotions = Emotion.all
   end
 
   def show
@@ -23,6 +24,12 @@ class ThoughtsController < ApplicationController
     else
         render :new
     end
+  end
+
+  def update
+    find_thought
+    @thought.update(thought_params)
+    redirect_to thoughts_path(@thought)
   end
 
   def destroy
