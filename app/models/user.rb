@@ -10,4 +10,7 @@ class User < ApplicationRecord
 
   #validations
   validates :email, uniqueness: true
+
+  include Gravtastic
+  gravtastic
 end

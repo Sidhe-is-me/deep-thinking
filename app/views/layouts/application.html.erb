@@ -13,10 +13,18 @@
   <body>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 <p class="navbar-text pull-right">
-
+  <% if session[:user_id] %>
+  <h1><%= @user.name %></h1>
+  <h2>Email: <%= @user.email %></h2>
+  <h2>Facebook UID: <%= @user.uid %></h2>
+  <img src="<%= @user.image %>">
+<% else %>
+  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+<% end %>
 
   <p class="navbar-text pull-right">
 <% if user_signed_in? %>
+  <%= image_tag current_user.gravatar_url(:size => 30)%>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
@@ -38,6 +46,7 @@
       <a class="navbar-brand" href="/">Deep DeepThoughts</a>
     </div>
     <div class="collapse navbar-collapse">
+
       <ul class="nav navbar-nav">
         <li class="active"><a href="/thoughts">Deep DeepThoughts</a></li>
         <li class=""><%= link_to 'New Thought', new_thought_path %></li>
@@ -45,8 +54,9 @@
     </div>
   </div>
   </nav>
-
+<br></br>
       <div class="container">
+        <br></br>
               <% if notice %>
                   <p class="alert alert-success"><%= notice %></p>
               <% end %>
