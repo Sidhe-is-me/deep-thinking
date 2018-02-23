@@ -1,0 +1,34 @@
+<%= form_for @thought do |form| %>
+  <% if thought.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(thought.errors.count, "error") %> prohibited this thought from being saved:</h2>
+      <ul>
+      <% thought.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :thought_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entry %>
+    <%= form.text_area :entry, id: :thought_entry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <br>
+    <%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
+    <br>
+    <%= form.file_field :picture, id: :thought_picture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
