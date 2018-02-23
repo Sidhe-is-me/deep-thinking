@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+   padding:5em;
+
+ }
+ .site-footer {
+   margin-top: 3em;
+   font-style: oblique;
+   font-family: fantasy;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #ebebeb;
+   text-align: center;
+ }
+
+ .emotions{
+    display: inline-flex;
+
+    color: grey;
+
+ }
+  .field{
+
+    margin-right: 3em;
+    margin-left: 3em;
+  }
