@@ -5,6 +5,7 @@ class ThoughtsController < ApplicationController
   end
 
   def show
+    find_thought
   end
 
   def new
