@@ -1,6 +1,7 @@
 class ThoughtsController < ApplicationController
 
   def index
+    @thoughts = Thought.all
   end
 
   def new
@@ -10,7 +11,7 @@ class ThoughtsController < ApplicationController
   def create
     @thought = Thought.new(thought_params)
       if @thought.save
-        redirect_to_thought_path(@thought)
+        redirect_to thoughts_path(@thought)
     else
         render :new
     end
@@ -29,7 +30,7 @@ class ThoughtsController < ApplicationController
   private
 
   def thought_params
-    params.require(:thought).permit(:date,:description,:picture)
+    params.require(:thought).permit(:date,:entry,:picture)
   end
 
 end

@@ -8,8 +8,28 @@
 <br></br>
 <div id="top-emotion" style="border: 1px solid gray; text-align: center;">Placeholder for top used emotion Report Per Requirements</div>
 <h6></h>
-
-
-
   </div>
 </div>
+
+
+<div class="thought">
+<% @thoughts.in_groups_of(3) do |group| %>
+  <div class="row" style="border: 2px solid gray; padding: .25em; ">
+    <% group.compact.each do |thought| %>
+      <div class="col-md-4">
+        <%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
+        <br></br>
+        <%= link_to thought.date, thought%>
+
+        <h6>Emotion Placeholder </h>
+        <h4><%=thought.entry%></h4>
+
+        <td><%= link_to 'Show', thought %></td>
+        <td><%= link_to 'Edit', edit_thought_path(thought) %></td>
+        <td><%= link_to 'Destroy', thought, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% end %>
