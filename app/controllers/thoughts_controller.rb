@@ -5,6 +5,7 @@ class ThoughtsController < ApplicationController
     @thoughts = User.find(params[:user_id]).thoughts
   else
     @thoughts = Thought.all
+
   end
 end
 
@@ -14,6 +15,7 @@ end
 
   def new
     @thought = Thought.new
+    @emotions = Emotion.all
   end
 
   def edit
@@ -22,6 +24,7 @@ end
 
   def create
     @thought = Thought.new(thought_params)
+
       if @thought.save
         redirect_to thoughts_path(@thought)
     else
@@ -49,7 +52,7 @@ end
   end
 
   def thought_params
-    params.require(:thought).permit(:date,:entry,:picture)
+    params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:emotion_name)
   end
 
 end

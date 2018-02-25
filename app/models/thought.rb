@@ -1,7 +1,7 @@
 class Thought < ApplicationRecord
   mount_uploader :picture, PictureUploader
   belongs_to :user, required: false
-  belongs_to :emotion, required: false
+  belongs_to :emotion 
 
   #validations
   validates :date, presence: true

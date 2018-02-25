@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
   has_many :thoughts
   has_many :emotions, through: :thoughts
+
+  accepts_nested_attributes_for :thoughts
 
   #validations
   validates :email, uniqueness: true

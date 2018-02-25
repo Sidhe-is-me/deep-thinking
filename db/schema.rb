@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223184736) do
+ActiveRecord::Schema.define(version: 20180225160950) do
 
   create_table "emotions", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20180223184736) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "emotions_ids"
+    t.integer "emotion_id"
+    t.index ["emotion_id"], name: "index_thoughts_on_emotion_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,8 +45,10 @@ ActiveRecord::Schema.define(version: 20180223184736) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "uid"
+    t.integer "thought_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["thought_id"], name: "index_users_on_thought_id"
   end
 
 end

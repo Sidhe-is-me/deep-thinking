@@ -21,13 +21,17 @@
   </div>
 </br>
 <div class="field">
-<h7> I want to set up emotion checkbox iterator here to allow the update to happen just checking and below with an add emotion box</h>
-  <div >
-    <%= form.label :emotion_name %>
-    <%= form.text_field :name, id: :emotion_name %>
+  <h7> I want to set up emotion iterator here to allow the update to happen just checking and below with an add emotion box</h>
+<div >
+  <%= form.fields_for :emotions do |emo| %>
+   <%options = options_from_collection_for_select(@emotions, 'id', 'name') %>
+      <%=form.select :emotion_id,  options %>
+  <br>
+    <%= emo.label :new_emotion_name %>
+    <%= emo.text_field :name, id: :emotions %>
+    <% end %>
   </div>
   </div>
-
   <div class="field">
     <%= form.label :picture %>
     <br>
