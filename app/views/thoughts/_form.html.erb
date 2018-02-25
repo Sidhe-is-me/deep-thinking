@@ -21,7 +21,8 @@
   </div>
 </br>
 <div class="field">
-  <h7> I want to set up emotion iterator here to allow the update to happen just checking and below with an add emotion box</h>
+  <h7> Only the select box is adding emotions to thoughts on the thought index page. the create method for emotion is not working- ASK-TA</h>
+    <br>
 <div >
   <%= form.fields_for :emotions do |emo| %>
    <%options = options_from_collection_for_select(@emotions, 'id', 'name') %>
@@ -33,12 +34,9 @@
   </div>
   </div>
   <div class="field">
-    <%= form.label :picture %>
     <br>
-    <%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
-    <br>
-    <br>
-    <%= form.file_field :picture, id: :thought_picture %>
+    <%= form.label :picture %><%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
+    <br>  <%= form.file_field :picture, id: :thought_picture %>
   </div>
 </br>
 <div class="field">

@@ -17,8 +17,8 @@ class EmotionsController < ApplicationController
     end
 
     def create
-        @emotion = Emotion.new(emotion_params).save
-        if @emotion
+        @emotion = Emotion.new(emotion_params)
+        if @emotion.save
           # I have no idea why this works for thought but not emotion
           redirect_to emotions_path(@emotion)
       else
@@ -40,6 +40,6 @@ class EmotionsController < ApplicationController
     end
 
     def emotion_params
-      params.require(:emotion).permit(:emotion_id,:name)
+      params.require(:emotion).permit(:name)
     end
 end

@@ -5,7 +5,6 @@ class ThoughtsController < ApplicationController
     @thoughts = User.find(params[:user_id]).thoughts
   else
     @thoughts = Thought.all
-
   end
 end
 

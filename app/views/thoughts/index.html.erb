@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 <h1>My Deep Thoughts</h1>
 <br>
-<div id="top-emotion" style="border: 1px solid gray; text-align: center;">Placeholder for top used emotion Report Per Requirements</div>
+<div id="top-emotion" style="border: 1px solid gray; text-align: center;">Placeholder for filter thoughts by emotion Report Per Requirements</div>
+
 </br>
 <h6></h>
   </div>
@@ -17,7 +18,7 @@
         <br></br>
        <%= link_to thought.date, thought%>
        <br>
-       <h7>Emotion</h>
+       <h7>Emotion:</h>
        <%= thought.emotion.name%>
         <h4><%=thought.entry%></h4>
 

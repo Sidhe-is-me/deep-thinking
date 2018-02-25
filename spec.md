@@ -37,3 +37,16 @@ Confirm:s
 - [ ] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate
+
+
+_____HELP_____
+
+Emotions -
+  create method will not working
+
+
+  Facebook log in
+    not working
+
+  Report
+    generate most used emotion and display at the top of the thought index
