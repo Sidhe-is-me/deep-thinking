@@ -3,6 +3,7 @@ class ThoughtsController < ApplicationController
   def index
      # @user = User.find(session["warden.user.user.key"].first.first)
      @user = current_user
+
     if @user
     @thoughts = @user.thoughts.all
   else
@@ -15,9 +16,9 @@ end
   end
 
   def new
-
     @thought = Thought.new
     @emotions = Emotion.all
+    @thought.user_id = current_user.id
   end
 
   def edit
@@ -26,6 +27,7 @@ end
 
   def create
     @thought = Thought.new(thought_params)
+    @thought.user_id = current_user.id
 
       if @thought.save
         redirect_to thoughts_path(@thought)

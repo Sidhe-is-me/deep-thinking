@@ -32,12 +32,16 @@
     <%= emo.text_field :name, id: :emotions %>
     <% end %>
   </div>
+<h6>Current user id for development:</h><%= current_user.id %>
+<h6>Thought user id for development:</h> <%= thought.user_id %>
+  <br></br>
   </div>
   <div class="field">
     <br>
     <%= form.label :picture %><%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
-    <br>  <%= form.file_field :picture, id: :thought_picture %>
-    <%= tag(:input, :type => "hidden", :name => :user_id, :value => current_user.id)%>
+    <br>
+    <%= form.file_field :picture, id: :thought_picture %>
+    <%= tag(:input, :type => "hidden", :current_user => :user_id, :value => current_user.id)%>
   </div>
 </br>
 <div class="field">
