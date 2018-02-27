@@ -4,5 +4,8 @@ class Emotion < ApplicationRecord
   belongs_to :user, required: false
 
   #validations
-  validates :emotion, uniqueness: true
+  validates :name, uniqueness: true
+
+
+
 end

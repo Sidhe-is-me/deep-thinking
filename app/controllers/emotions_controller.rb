@@ -19,11 +19,16 @@ class EmotionsController < ApplicationController
     def create
         @emotion = Emotion.new(emotion_params)
         if @emotion.save
-          # I have no idea why this works for thought but not emotion
-          redirect_to emotions_path(@emotion)
+           redirect_to emotions_path(@emotion)
       else
           render :new
       end
+    end
+
+    def update
+      find_emotion
+      @emotion.update(emotion_params)
+      redirect_to emotions_path(@emotion)
     end
 
     def destroy

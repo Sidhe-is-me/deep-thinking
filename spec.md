@@ -18,6 +18,10 @@ Specs:
           -validate uniqueness
 
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+
+      per Corinna- possibly have /users/most_posts_on_date
+      http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
+
 - [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
 
 - [ ] Include signup (how e.g. Devise)
@@ -43,6 +47,7 @@ _____HELP_____
 
 Emotions -
   create method will not working
+    undefined method emotion for #<Emotion:0x007fec8e5e4bd8>
 
 
   Facebook log in

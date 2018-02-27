@@ -1,6 +1,7 @@
 class ThoughtsController < ApplicationController
 
   def index
+  
     if params[:user_id]
     @thoughts = User.find(params[:user_id]).thoughts
   else
@@ -13,6 +14,7 @@ end
   end
 
   def new
+
     @thought = Thought.new
     @emotions = Emotion.all
   end

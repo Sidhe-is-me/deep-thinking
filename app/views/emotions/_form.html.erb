@@ -1,28 +1,34 @@
-<%= form_for @emotion do |form| %>
-  <% if emotion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(emotion.errors.count, "error") %> prohibited this emotion from being saved:</h2>
-      <ul>
-      <% emotion.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<% if emotion.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(emotion.errors.count, "error") %> prohibited this emotion from being saved:</h2>
+    <ul>
+    <% emotion.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>
+  <img src="http://www.copypress.com/blog/wp-content/uploads/2012/09/Wheellarge.png" alt="Emo wheel" width="50%" height="50%"></img>
+
+
+
+
+
+
+<%= form_for @emotion, url: {action: "create"} do |form| %>
+
 
 
   <div style="block">
     <h3 style="text-align: center">Add new Emotion</h>
       <br>
     <%= form.label :name %>
-    <%= form.text_field :name, id: :emotion_name %>
+    <%= form.text_field :name %>
     <div class="actions">
       <%=form.submit %>
     </div>
-      <img src="http://www.copypress.com/blog/wp-content/uploads/2012/09/Wheellarge.png" alt="Emo wheel" width="50%" height="50%"></img>
 
-
-</div>
 <br>
 
 <% end %>
