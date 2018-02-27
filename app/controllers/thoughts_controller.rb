@@ -1,9 +1,10 @@
 class ThoughtsController < ApplicationController
 
   def index
-  
-    if params[:user_id]
-    @thoughts = User.find(params[:user_id]).thoughts
+     # @user = User.find(session["warden.user.user.key"].first.first)
+     @user = current_user
+    if @user
+    @thoughts = @user.thoughts.all
   else
     @thoughts = Thought.all
   end
@@ -53,7 +54,7 @@ end
   end
 
   def thought_params
-    params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:emotion_name)
+    params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:emotion_name,:user_id)
   end
 
 end

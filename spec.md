@@ -9,8 +9,8 @@ Specs:
       Journal belongs to user
 - [x] Include at least one has_many through relationship (x has_many y through z e.g. Recipe has_many Items through Ingredients)
       User has many Emotions thru Journal
-- [ ] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity)
-
+- [x ] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity)
+        -emotion
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
         -User validates email uniqueness
         -Journal validates length of entry/thought_description
@@ -24,10 +24,10 @@ Specs:
 
 - [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
 
-- [ ] Include signup (how e.g. Devise)
+- [x] Include signup (how e.g. Devise)
   Devise
-- [ ] Include login (how e.g. Devise)
-Devise
+- [x] Include login (how e.g. Devise)
+Deviseß
 - [ ] Include logout (how e.g. Devise)
 Devise
 - [ ] Include third party signup/login (how e.g. Devise/OmniAuth)

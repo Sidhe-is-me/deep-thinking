@@ -6,4 +6,5 @@ class Thought < ApplicationRecord
   #validations
   validates :date, presence: true
   validates :entry, length: {minimum: 50}
+  
 end
