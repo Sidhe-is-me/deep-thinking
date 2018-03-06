@@ -1,7 +1,7 @@
 class ThoughtsController < ApplicationController
 
   def index
-     # @user = User.find(session["warden.user.user.key"].first.first)
+     #hack @user = User.find(session["warden.user.user.key"].first.first)
      @user = current_user
 
     if @user
@@ -47,6 +47,8 @@ end
     @thought.delete
     redirect_to thoughts_path(@thought)
   end
+
+
 
 
   private

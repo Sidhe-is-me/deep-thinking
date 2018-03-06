@@ -21,15 +21,18 @@
   </div>
 </br>
 <div class="field">
-  <h7> Only the select box is adding emotions to thoughts on the thought index page. the create method for emotion is not working- ASK-TA</h>
-    <br>
-<div >
+
+<div style="">
+  <h6>select box is working</h>
   <%= form.fields_for :emotions do |emo| %>
    <%options = options_from_collection_for_select(@emotions, 'id', 'name') %>
       <%=form.select :emotion_id,  options %>
-  <br>
+  <br><br></br>
+  <h7>Need to find or create new emo as a nested form working</h>
+    <br>
     <%= emo.label :new_emotion_name %>
     <%= emo.text_field :name, id: :emotions %>
+
     <% end %>
   </div>
 <h6>Current user id for development:</h><%= current_user.id %>

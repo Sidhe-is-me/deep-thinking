@@ -6,5 +6,13 @@ class Thought < ApplicationRecord
   #validations
   validates :date, presence: true
   validates :entry, length: {minimum: 50}
-  
+
+
+  def emotions_attributes=(emotions_attributes)
+    emotions_attributes.each do |emotion_attributes|
+      self.emotion.build(emotion_attributes)
+    end
+  end
+
+
 end

@@ -27,13 +27,16 @@ Specs:
 - [x] Include signup (how e.g. Devise)
   Devise
 - [x] Include login (how e.g. Devise)
-Deviseß
+Devise
 - [ ] Include logout (how e.g. Devise)
 Devise
 - [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
   coded out every thing from the lesson. Can't get it to work.
+
 - [ ] Include nested resource show or index (URL e.g. users/2/recipes)
+
 - [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
+
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:s
@@ -45,13 +48,5 @@ Confirm:s
 
 _____HELP_____
 
-Emotions -
-  create method will not working
-    undefined method emotion for #<Emotion:0x007fec8e5e4bd8>
-
-
   Facebook log in
     not working
-
-  Report
-    generate most used emotion and display at the top of the thought index
