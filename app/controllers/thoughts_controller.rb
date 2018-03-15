@@ -19,15 +19,22 @@ end
     @thought = Thought.new
     @emotions = Emotion.all
     @thought.user_id = current_user.id
+
   end
 
   def edit
     find_thought
   end
 
+# params["thought"]["emotion"]
+
   def create
+
     @thought = Thought.new(thought_params)
     @thought.user_id = current_user.id
+    @thought.emotion = Emotion.new(thought_params["emotion"].to_h)
+    # @thought.emotion = Emotion.new(thought_params["emotion"])
+
 
       if @thought.save
         redirect_to thoughts_path(@thought)
@@ -57,8 +64,12 @@ end
     @thought = Thought.find(params[:id])
   end
 
+
   def thought_params
-    params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:emotion_name,:user_id)
+    #add emotion_attributes
+    params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:user_id,emotion:[:name])
   end
+
+# per TB try :emotion_attributes =>[:name]
 
 end

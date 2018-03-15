@@ -50,3 +50,19 @@ _____HELP_____
 
   Facebook log in
     not working
+This is a mock up of how I want to build out my params
+    params ={
+          :user={
+                :email => "email@email.com",
+                :password => "password",
+                      thoughts = {
+                          :date => "this is the thought's date",
+                          :thought_entry => "this is a thought",
+                          :picture => "pictures are just long strings, isn't that weird?"
+                                :emotion {
+                                  :name => "stressed out"
+                                  }
+            }
+          }
+
+    }

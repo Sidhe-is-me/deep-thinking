@@ -24,16 +24,26 @@
 
 <div style="">
   <h6>select box is working</h>
-  <%= form.fields_for :emotions do |emo| %>
+  <%= form.fields_for :emotion do |emo| %>
    <%options = options_from_collection_for_select(@emotions, 'id', 'name') %>
       <%=form.select :emotion_id,  options %>
+
+
   <br><br></br>
   <h7>Need to find or create new emo as a nested form working</h>
+
+    <h7>user[thought][emotion_attributes][][name] value= "emotion_name"
+    Don't forget to add to strong params for thought</h>
     <br>
     <%= emo.label :new_emotion_name %>
     <%= emo.text_field :name, id: :emotions %>
 
     <% end %>
+
+
+
+
+
   </div>
 <h6>Current user id for development:</h><%= current_user.id %>
 <h6>Thought user id for development:</h> <%= thought.user_id %>
