@@ -21,26 +21,29 @@
   </div>
 </br>
 <div class="field">
+  <div class="field">
+    <%#= #form.label :emotion  %>
+    <%#=form.text_area :emotion, id: :emotion_name %>
+  </div>
 
-<div style="">
-  <h6>select box is working</h>
-  <%= form.fields_for :emotion do |emo| %>
-   <%options = options_from_collection_for_select(@emotions, 'id', 'name') %>
-      <%=form.select :emotion_id,  options %>
+  <%=fields_for :emotion_attributes do |emotion_attribute| %>
+ <%= emotion_attribute.label :emotion %>
+ <%= emotion_attribute.text_field :name %>
+ <% end %>
 
-
-  <br><br></br>
-  <h7>Need to find or create new emo as a nested form working</h>
-
-    <h7>user[thought][emotion_attributes][][name] value= "emotion_name"
-    Don't forget to add to strong params for thought</h>
-    <br>
-    <%= emo.label :new_emotion_name %>
-    <%= emo.text_field :name, id: :emotions %>
-
+<!-- the thought form -->
+	  <%= form.fields_for :emotions_attributes do |emotion_attributes| %>
+    <%= emotion_attributes.collection_select :id, Emotion.all, :id, :name %>
     <% end %>
 
 
+<div>
+
+
+  </div>
+</br>
+<div class="field">
+<div style="">
 
 
 

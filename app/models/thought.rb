@@ -2,18 +2,21 @@ class Thought < ApplicationRecord
   mount_uploader :picture, PictureUploader
   belongs_to :user, required: false
   belongs_to :emotion
+  accepts_nested_attributes_for :emotion
 
   #validations
   validates :date, presence: true
   validates :entry, length: {minimum: 50}
 
-# #accepts_nested_attributes_for :emotions
-#   def emotions_attributes=(emotions_attributes)
-#     #this is an example from Avi's video- Not gonna work for me as I only have one attribute(name) for emotions
-#     emotions_attributes.each do |emotion_attributes|
-#       self.emotion.build(emotion_attributes)
-#     end
-  # end
+
+
+#accepts_nested_attributes_for :emotions
+def emotions_attributes=(emotion_attributes)
+
+    emotion = Emotion.find(emotion_attributes[:id]) #this shouldn't be needed since the next line?
+      self.emotion_id = emotion.id
+      self.save #also maybe not needed
+   end
 
 
 end

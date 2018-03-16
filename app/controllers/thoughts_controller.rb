@@ -6,6 +6,7 @@ class ThoughtsController < ApplicationController
 
     if @user
     @thoughts = @user.thoughts.all
+
   else
     @thoughts = Thought.all
   end
@@ -16,9 +17,9 @@ end
   end
 
   def new
-    @thought = Thought.new
-    @emotions = Emotion.all
-    @thought.user_id = current_user.id
+  @thought = Thought.new
+  @emotion = @thought.build_emotion
+  @thought.user_id = current_user.id
 
   end
 
@@ -32,8 +33,10 @@ end
 
     @thought = Thought.new(thought_params)
     @thought.user_id = current_user.id
-    @thought.emotion = Emotion.new(thought_params["emotion"].to_h)
-    # @thought.emotion = Emotion.new(thought_params["emotion"])
+     # Emotion.new(thought_params["emotion"].to_h)
+
+     @thought.emotion = Emotion.new(thought_params["emotion"])
+     @emotion = @thought.build_emotion
 
 
       if @thought.save
@@ -64,10 +67,17 @@ end
     @thought = Thought.find(params[:id])
   end
 
+# This code gives me ActiveRecord::AssociationTypeMismatch in ThoughtsController#create
+  # def thought_params
+  #   #add emotion_attributes
+  #   params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:user_id,emotion:[:name])
+  # end
 
+
+# THis code gives me a no method error for map
   def thought_params
     #add emotion_attributes
-    params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:user_id,emotion:[:name])
+     params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:user_id, :emotions_attributes => [:id])
   end
 
 # per TB try :emotion_attributes =>[:name]

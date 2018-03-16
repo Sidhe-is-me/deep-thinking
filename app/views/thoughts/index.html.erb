@@ -2,7 +2,7 @@
 <h1>My Deep Thoughts</h1>
 <br>
 <div id="top-emotion" style="border: 1px solid gray; text-align: center;">Placeholder for filter thoughts by emotion Report Per Requirements</div>
-#use the opetions_for_select tag? 
+
 
 
 </br>
@@ -21,7 +21,8 @@
        <%= link_to thought.date, thought%>
        <br>
        <h7>Emotion:</h>
-       <%= thought.emotion.name%>
+
+       <%=  thought.emotion.inspect %>
         <h4><%=thought.entry%></h4>
 
         <td><%= link_to 'Show', thought %></td>
