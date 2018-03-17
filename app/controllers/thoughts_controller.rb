@@ -2,13 +2,13 @@ class ThoughtsController < ApplicationController
 
   def index
      #hack @user = User.find(session["warden.user.user.key"].first.first)
-     @user = current_user
-
+    @user = current_user
     if @user
-    @thoughts = @user.thoughts.all
+      @thoughts = @user.thoughts.all
+
 
   else
-    @thoughts = Thought.all
+      @thoughts = Thought.all
   end
 end
 
@@ -33,10 +33,8 @@ end
 
     @thought = Thought.new(thought_params)
     @thought.user_id = current_user.id
-     # Emotion.new(thought_params["emotion"].to_h)
-
-     @thought.emotion = Emotion.new(thought_params["emotion"])
-     @emotion = @thought.build_emotion
+    @thought.emotion = Emotion.new(thought_params["emotion_attributes"])
+     #@emotion = @thought.build_emotion
 
 
       if @thought.save
@@ -77,7 +75,7 @@ end
 # THis code gives me a no method error for map
   def thought_params
     #add emotion_attributes
-     params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:user_id, :emotions_attributes => [:id])
+     params.require(:thought).permit(:date,:entry,:picture,:emotion_id,:user_id, :emotion_attributes => [:name]) #:emotion_attributes => [:id])
   end
 
 # per TB try :emotion_attributes =>[:name]

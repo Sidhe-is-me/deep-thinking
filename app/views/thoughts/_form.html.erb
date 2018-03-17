@@ -26,13 +26,13 @@
     <%#=form.text_area :emotion, id: :emotion_name %>
   </div>
 
-  <%=fields_for :emotion_attributes do |emotion_attribute| %>
+  <%=form.fields_for :emotion_attributes do |emotion_attribute| %>
  <%= emotion_attribute.label :emotion %>
  <%= emotion_attribute.text_field :name %>
  <% end %>
 
 <!-- the thought form -->
-	  <%= form.fields_for :emotions_attributes do |emotion_attributes| %>
+	  <%= form.fields_for :emotion_attributes do |emotion_attributes| %>
     <%= emotion_attributes.collection_select :id, Emotion.all, :id, :name %>
     <% end %>
 

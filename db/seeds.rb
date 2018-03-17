@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+Emotion.create!([
+  {name: "seed_Emo_1"},
+  {name:  "seed_Emo_2"},
+  {name:  "seed_Emo_3"},
+  {name:  "seed_Emo_4"},
+  {name: "emo from emo form 1"},
+  {name: "emo from emo form 2"},
+  {name: "emo from emo form 3"},
+])
+Thought.create!([
+  {date: "2018-03-17 00:00:00", name: nil, entry: "Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit.<br/><br/>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat.", picture: "doctor_who_logo_22.jpg", emotion_id: 2, user_id: 1},
+  {date: "2018-03-17 00:00:00", name: nil, entry: "Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit.<br/><br/>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat.", picture: "Misc_Motivational_323193.jpg", emotion_id: 1, user_id: 1},
+  {date: "2018-03-17 00:00:00", name: nil, entry: "Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit.<br/><br/>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat.", picture: "rey_wallpaper_by_plagued_art-d9m8c2u.jpg", emotion_id: 4, user_id: 1},
+  {date: "2018-03-17 00:00:00", name: nil, entry: "This emotion was created on the emo form and selected from the drop down and still does not save the name, but it shows up on the new emo index page", picture: "Moon-E-DI.jpg", emotion_id: 1, user_id: 1}
+])
