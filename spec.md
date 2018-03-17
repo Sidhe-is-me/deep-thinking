@@ -22,34 +22,32 @@ Specs:
       per Corinna- possibly have /users/most_posts_on_date
       http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
 
-- [ ] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
+- [s] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
 
 - [x] Include signup (how e.g. Devise)
   Devise
 - [x] Include login (how e.g. Devise)
 Devise
-- [ ] Include logout (how e.g. Devise)
+- [ x] Include logout (how e.g. Devise)
 Devise
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x ] Include third party signup/login (how e.g. Devise/OmniAuth)
   coded out every thing from the lesson. Can't get it to work.
 
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes)
+- [x ] Include nested resource show or index (URL e.g. users/2/recipes)
 
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
+- [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
 
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [x ] Include form display of validation errors (form URL e.g. /recipes/new)
+  -Thought entry form needs 150 chars for entry to save
 
 Confirm:s
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [x] Views use partials if appropriate
 
 
 _____HELP_____
-
-  Facebook log in
-    not working
 This is a mock up of how I want to build out my params
     params ={
           :user={

@@ -1,12 +1,12 @@
 
 Emotion.create!([
-  {name: "seed_Emo_1"},
-  {name:  "seed_Emo_2"},
-  {name:  "seed_Emo_3"},
-  {name:  "seed_Emo_4"},
-  {name: "emo from emo form 1"},
-  {name: "emo from emo form 2"},
-  {name: "emo from emo form 3"},
+  {name: "Fear"},
+  {name:  "Anger"},
+  {name:  "Sadness"},
+  {name:  "Joy"},
+  {name: "Disgust"},
+  {name: "Suprise"},
+  {name: "Trust"},
 ])
 Thought.create!([
   {date: "2018-03-17 00:00:00", name: nil, entry: "Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit.<br/><br/>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat.", picture: "doctor_who_logo_22.jpg", emotion_id: 2, user_id: 1},
