@@ -17,15 +17,14 @@
       <%= f.label :remember_me %>
     </div>
   <% end -%>
-
+<div class="field">
   <div class="actions">
+    <%= render "devise/shared/links" %>
+    <br>
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+  </div>
 
-<%= render "devise/shared/links" %>
-<h5>OR</h>
+
   <br>
-  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-
-  

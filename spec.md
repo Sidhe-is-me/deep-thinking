@@ -1,7 +1,7 @@
 # Specifications for the Rails Assessment
 
 Specs:
-- x] Using Ruby on Rails for the project
+- [x] Using Ruby on Rails for the project
     Complete
 - [x] Include at least one has_many relationship (x has_many y e.g. User has_many Recipes)
       User has many Journals
@@ -41,9 +41,9 @@ Devise
   -Thought entry form needs 150 chars for entry to save
 
 Confirm:s
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
+- [x] The application is pretty DRY
+- [x] Limited logic in controllers
+- [x] Views use helper methods if appropriate
 - [x] Views use partials if appropriate
 
 

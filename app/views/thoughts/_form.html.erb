@@ -10,49 +10,33 @@
     </div>
   <% end %>
 <div id="form">
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date, id: :thought_date %>
-  </div>
+    <div class="field">
+      <%= form.label :date %>
+      <%= form.date_select :date, id: :thought_date %>
+    </div>
 <br>
-  <div class="field">
-    <%= form.label :entry %>
-    <%= form.text_area :entry, id: :thought_entry %>
-  </div>
+    <div class="field">
+      <%= form.label :entry %>
+      <%= form.text_area :entry, id: :thought_entry %>
+    </div>
 </br>
-<div class="field">
   <div class="field">
-
-  </div>
+<div class="field">
   <%=form.fields_for :emotion_attributes do |emotion_attribute| %>
  <%= emotion_attribute.label :emotion %>
  <%= emotion_attribute.text_field :name %>
  <% end %>
-
 <!-- theDropDown I can't get to work I wanted to beable to either create an emo or select from a dropdown- -->
 	  <%#= form.fields_for :emotion_attributes do |emotion_attributes| %>
     <%#= emotion_attributes.collection_select :id, Emotion.all, :id, :name %>
     <%# end %>
-
-
-<div>
-
-
-  </div>
-</br>
-<div class="field">
-<div style="">
-
-
-
-  </div>
-<h6>Current user id for development:</h><%= current_user.id %>
-<h6>Thought user id for development:</h> <%= thought.user_id %>
-  <br></br>
-  </div>
+</div>
+<!-- <h6>Current user id for development:</h><%= current_user.id %>
+<h6>Thought user id for development:</h> <%= thought.user_id %> -->
   <div class="field">
     <br>
-    <%= form.label :picture %><%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
+    <%= form.label :picture %>
+    <%= image_tag thought.picture_url(:thumb) if thought.picture.present? %>
     <br>
     <%= form.file_field :picture, id: :thought_picture %>
     <%= tag(:input, :type => "hidden", :current_user => :user_id, :value => current_user.id)%>
@@ -65,3 +49,4 @@
 <% end %>
 </div>
 </div>
+<br>
