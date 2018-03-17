@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
-  get '/auth/facebook/callback' => 'sessions#create'
-devise_for :users
+
+devise_for :users,  controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 resources :users
 resources :thoughts
 resources :emotions
