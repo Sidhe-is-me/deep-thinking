@@ -19,7 +19,7 @@ Specs:
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
       http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
 
-- [x] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
+- [x] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item) Thought form - emotions
 
 - [x] Include signup (how e.g. Devise)
   Devise

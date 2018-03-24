@@ -1,7 +1,11 @@
 <h1>Emotions</h1>
-<% @emotions.each do |emo| %>
+<% #@emotions.each do |emo| %>
 <br>
-<%=emo.name %>
+<%#=emo.name %>
 <br>
-<% end %>
+<% #end %>
 </div>
+
+<% @thought.emotions.each do |emo| %>
+<%=emo.name %>
+<% end %>

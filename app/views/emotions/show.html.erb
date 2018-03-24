@@ -1,2 +1,8 @@
 <h1>Emotions#show</h1>
 <p>Find me in app/views/emotions/show.html.erb</p>
+<div class="field">
+  <!-- <%=form_for :emotion_attributes do |emotion_attribute| %>
+ <%= emotion_attribute.label :emotion %>
+ <%= emotion_attribute.text_field :name, id: @emotion.name%> -->
+ <%=@emotion.name%>
+<% end %>

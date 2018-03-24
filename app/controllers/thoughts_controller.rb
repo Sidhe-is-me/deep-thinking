@@ -11,6 +11,7 @@ end
 
   def show
     find_thought
+
   end
 
   def new
@@ -39,6 +40,7 @@ end
   def update
     find_thought
     @thought.update(thought_params)
+    @thought.emotion = Emotion.find_or_create_by(thought_params["emotion_attributes"])
     redirect_to thoughts_path(@thought)
   end
 
