@@ -5,8 +5,7 @@ Specs:
     Complete
 - [x] Include at least one has_many relationship (x has_many y e.g. User has_many Recipes)
       User has many Journals
-- [x] Include at least one belongs_to relationship (x belongs_to y e.g. Post belongs_to User)
-      Journal belongs to user
+- [x] Include at least one belongs_to relationship (x belongs_to y e.g. Post belongs_to User)   Journal belongs to user
 - [x] Include at least one has_many through relationship (x has_many y through z e.g. Recipe has_many Items through Ingredients)
       User has many Emotions thru Journal
 - [x ] The "through" part of the has_many through includes at least one user submittable attribute (attribute_name e.g. ingredients.quantity)
@@ -18,25 +17,19 @@ Specs:
           -validate uniqueness
 
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-
-      per Corinna- possibly have /users/most_posts_on_date
       http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
 
-- [s] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
+- [x] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item)
 
 - [x] Include signup (how e.g. Devise)
   Devise
-- [x] Include login (how e.g. Devise)
-Devise
-- [ x] Include logout (how e.g. Devise)
-Devise
+- [x] Include login (how e.g. Devise) Devise
+- [ x] Include logout (how e.g. Devise) Devise
 - [x ] Include third party signup/login (how e.g. Devise/OmniAuth)
-  coded out every thing from the lesson. Can't get it to work.
-
-- [x ] Include nested resource show or index (URL e.g. users/2/recipes)
-
-- [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-
+- [] Include nested resource show or index (URL e.g. users/2/recipes)
+      /users/user_id/thoughts
+- [] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
+          /users/user_id/thoughts
 - [x ] Include form display of validation errors (form URL e.g. /recipes/new)
   -Thought entry form needs 150 chars for entry to save
 
