@@ -16,23 +16,20 @@ Specs:
         -Emotion
           -validate uniqueness
 
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-      http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
-
+- [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+      On Thought index page- Day with Most Thoughts
 - [x] Include a nested form writing to an associated model using a custom attribute writer (form URL, model name e.g. /recipe/new, Item) Thought form - emotions
-
 - [x] Include signup (how e.g. Devise)
   Devise
 - [x] Include login (how e.g. Devise) Devise
-- [ x] Include logout (how e.g. Devise) Devise
-- [x ] Include third party signup/login (how e.g. Devise/OmniAuth)
-- [] Include nested resource show or index (URL e.g. users/2/recipes)
-      /users/user_id/thoughts
-- [] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-          /users/user_id/thoughts
+- [x] Include logout (how e.g. Devise) Devise
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x] Include nested resource show or index (URL e.g. users/2/recipes)
+      http://localhost:3000/thoughts/24/emotions/35
+- [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
+      Inside the thought form create a new emo
 - [x ] Include form display of validation errors (form URL e.g. /recipes/new)
   -Thought entry form needs 150 chars for entry to save
-
 Confirm:s
 - [x] The application is pretty DRY
 - [x] Limited logic in controllers

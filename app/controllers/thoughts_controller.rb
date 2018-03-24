@@ -2,12 +2,12 @@ class ThoughtsController < ApplicationController
 
   def index
     @user = current_user
-    if @user
-      @thoughts = @user.thoughts.all
-  else
-      @thoughts = Thought.all
+        if @user
+          @thoughts = @user.thoughts.all
+        else
+          @thoughts = Thought.all
+        end
   end
-end
 
   def show
     find_thought

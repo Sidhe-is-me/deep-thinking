@@ -7,16 +7,6 @@ class EmotionsController < ApplicationController
     def show
       # find_emotion
       @emotion = Emotion.find(params[:id])
-      #  if params[:thought_id]
-      #  @thought = Thought.find_by(id: params[:thought_id])
-      #  binding.pry
-      #   @emotion = @thought.emotion.find(params[:emotion_id])
-      #    if @emotion.nil?
-      #     redirect_to thought_emotion_path(@thought), alert: "Emotion not found"
-      #   end
-      #  else
-      #    @emotion = Emotion.find(params[:id])
-      # end
     end
 
     # def new

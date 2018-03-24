@@ -9,14 +9,17 @@ class Thought < ApplicationRecord
   validates :entry, length: {minimum: 50}
 
 
+  def emotions_attributes=(emotion_attributes)
+      emotion = Emotion.find(emotion_attributes[:id])
+        self.emotion_id = emotion.id
+        self.save 
+  end
 
-#accepts_nested_attributes_for :emotions
-def emotions_attributes=(emotion_attributes)
+  def self.total_each_day
+    @thoughts = Thought.all
+    @thoughts.group('date').order('count_id desc').count('id')
 
-    emotion = Emotion.find(emotion_attributes[:id]) #this shouldn't be needed since the next line?
-      self.emotion_id = emotion.id
-      self.save #also maybe not needed
-   end
 
+  end
 
 end

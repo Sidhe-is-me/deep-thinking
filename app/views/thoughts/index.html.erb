@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 <h1>My Deep Thoughts</h1>
 <br>
-<div id="top-emotion" style="border: 1px solid gray; text-align: center;">Placeholder for scope requirement</div>
-</br>
-<h6></h>
-  </div>
+<div id="top-emotion" style="border: 1px solid gray; text-align: center;">
+  <h4></h>The Day with the most Thinking Done:</h4>
+      <%= @thoughts.total_each_day.first[0]%>
+      <br>
+  <h4>Total Thoughts:
+    <%= @thoughts.total_each_day.first[1]%>
+  </h>
+    </br>
 </div>
 
-
+<br>
 <div class="thought">
 <% @thoughts.in_groups_of(3) do |group| %>
   <div class="row" style="border: 2px solid gray; padding: .25em; ">
@@ -24,13 +28,11 @@
         <td><%= link_to 'Show', thought %></td>
         <td><%= link_to 'Edit', edit_thought_path(thought) %></td>
         <td><%= link_to 'Destroy', thought, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </div>
+    </div>
     <% end %>
   </div>
 </div>
 
 <% end %>
 <div id="buffer">
-<h6></h>
-
 </div>

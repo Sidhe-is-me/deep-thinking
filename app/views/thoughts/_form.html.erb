@@ -23,8 +23,10 @@
   <div class="field">
 <div class="field">
   <%=form.fields_for :emotion_attributes do |emotion_attribute| %>
- <%= emotion_attribute.label :emotion %>
- <%= emotion_attribute.text_field :name, id: :emotion_name%>
+ <%= emotion_attribute.label :emotion %><br>
+ <h6>Current Emotion:</h><%=@thought.emotion.name%>
+   <h6>Change?:</h>
+ <%= emotion_attribute.text_field :name%>
  <% end %>
 <!-- theDropDown I can't get to work I wanted to beable to either create an emo or select from a dropdown- -->
 	  <%#= form.fields_for :emotion_attributes do |emotion_attributes| %>
